@@ -17,6 +17,12 @@
             <artifactId>swjTestA</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>com.sunwenjiu.second</groupId>
+            <artifactId>shiro2</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
     </dependencies>
 
 

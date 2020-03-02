@@ -8,16 +8,17 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
          <revision>1.0.0</revision>
-        <shiro.version>1.4.1</shiro.version>
-        <shiro-core.version>1.4.1</shiro-core.version>
-        <shiro-ehcache.version>1.4.1</shiro-ehcache.version>
+       <!-- <shiro.version>1.4.0</shiro.version>
+        <shiro-core.version>1.4.0</shiro-core.version>
+        <shiro-ehcache.version>1.4.0</shiro-ehcache.version>-->
     </properties>
 
     <parent>
         <!-- 父类-（创建类）-->
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
+        <!--<version>2.2.5.RELEASE</version>-->
+        <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -31,6 +32,9 @@
         <module>main</module>
         <module>swjTestA</module>
         <module>swjTestB</module>
+        <module>swjTestC</module>
+        <module>shiro2</module>
+
 
     </modules>
    <!-- <dependencyManagement>-->
@@ -68,7 +72,39 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!--shiro依赖-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.44</version>
+        </dependency>
 
+        <!--数据类型操作类-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
+        </dependency>
+        <!--shiro 结束-->
 
     </dependencies>
    <!-- </dependencyManagement>-->
