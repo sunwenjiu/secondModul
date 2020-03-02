@@ -17,7 +17,6 @@
             <artifactId>swjTestA</artifactId>
             <version>${revision}</version>
         </dependency>
-
     </dependencies>
 
 

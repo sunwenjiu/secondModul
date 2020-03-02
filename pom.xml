@@ -31,8 +31,9 @@
         <module>main</module>
         <module>swjTestA</module>
         <module>swjTestB</module>
-    </modules>
 
+    </modules>
+   <!-- <dependencyManagement>-->
     <dependencies>
         <!--JPA -->
         <dependency>
@@ -68,8 +69,9 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
 
+    </dependencies>
+   <!-- </dependencyManagement>-->
     <build>
         <plugins>
             <plugin>
