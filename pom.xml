@@ -7,10 +7,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-         <revision>1.0-SNAPSHOT</revision>
-        <!--<shiro.version>1.4.1</shiro.version>
+         <revision>1.0.0</revision>
+        <shiro.version>1.4.1</shiro.version>
         <shiro-core.version>1.4.1</shiro-core.version>
-        <shiro-ehcache.version>1.4.1</shiro-ehcache.version>-->
+        <shiro-ehcache.version>1.4.1</shiro-ehcache.version>
     </properties>
 
     <parent>
@@ -29,8 +29,8 @@
 
     <modules>
         <module>main</module>
-        <module>entity</module>
-        <module>service</module>
+        <module>swjTestA</module>
+        <module>swjTestB</module>
     </modules>
 
     <dependencies>

@@ -1,0 +1,1 @@
+package com.sunwenjiu.second.swjTestB;import com.sunwenjiu.second.swjTestA.Dict;/** * @athor SWJ * @Date 2020/3/2 */public class TestB {    Dict dict = new Dict();}

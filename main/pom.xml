@@ -14,8 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.sunwenjiu.second</groupId>
-            <artifactId>entity</artifactId>
-            <!--<version>1.0-SNAPSHOT</version>-->
+            <artifactId>swjTestA</artifactId>
             <version>${revision}</version>
         </dependency>
 

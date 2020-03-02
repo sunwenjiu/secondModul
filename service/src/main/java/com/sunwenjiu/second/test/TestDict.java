@@ -1,1 +1,0 @@
-package com.sunwenjiu.second.test;import com.sunwenjiu.second.entity.Dict;/** * @athor SWJ * @Date 2020/3/2 */public class TestDict {  Dict dict =new Dict();}
