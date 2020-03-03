@@ -22,6 +22,11 @@
             <artifactId>shiro2</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>com.sunwenjiu.second</groupId>
+            <artifactId>webSocket</artifactId>
+            <version>${revision}</version>
+        </dependency>
 
     </dependencies>
 
