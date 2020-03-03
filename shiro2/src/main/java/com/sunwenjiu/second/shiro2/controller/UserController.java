@@ -11,6 +11,7 @@ import com.sunwenjiu.second.shiro2.vo.UserVO;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -170,18 +171,19 @@ public class UserController extends BaseController{
 
         System.out.println(user.toString());
         if (user.getUserName() == null || !sexIsRight){
+            return ResultVOUtil.error(ResultEnum.ERROR.getCode(), ResultEnum.ERROR.getMessage());
            // throw new ParameterInvalidException("传入的参数是非法的");
         }
         userService.createUser(user);
 
-        return new ResultVO<>(SUCCESS);
+        return ResultVOUtil.success();
     }
 
     @RequestMapping("show")
     public ResultVO<PageVO<List<UserVO> >> showAllUserOnPage(int pageNo, int pageSize){
         PageVO<List<UserVO> > pageVO= userService.findAllPage(pageNo, pageSize);
 
-        return new ResultVO<>(SUCCESS, pageVO);
+        return ResultVOUtil.success(pageVO);
     }
 
     /**
@@ -192,7 +194,7 @@ public class UserController extends BaseController{
     public ResultVO<Void> del(@PathVariable("id") String id ){
         userService.delUserById(id);
 
-        return new ResultVO<>(SUCCESS);
+        return ResultVOUtil.success();
     }
 
     /**
@@ -202,9 +204,12 @@ public class UserController extends BaseController{
     @RequestMapping("delAll")
     public ResultVO<Void> deleteByUserIdIn(  String ids){
         List<String> LString = regDelAllData(ids);
+        if (StringUtils.isEmpty(LString)){
+            return ResultVOUtil.error(ResultEnum.ERROR.getCode(), ResultEnum.ERROR.getMessage());
+        }
         userService.deleteByUserIdIn(LString);
 
-        return new ResultVO<>(SUCCESS);
+        return ResultVOUtil.success();
     }
 
     @RequestMapping("update")
@@ -214,11 +219,12 @@ public class UserController extends BaseController{
         boolean sexIsRight =user.getUserSex().toString() == "MAN"? true:user.getUserSex().toString() == "WOMAN"?true:false;
 
         if (user.getUserId().length() != 32  || !sexIsRight){
+            return ResultVOUtil.error(ResultEnum.ERROR.getCode(), ResultEnum.ERROR.getMessage());
            // throw new ParameterInvalidException("传入的参数有误");
         }
 
         userService.update(user);
-        return new ResultVO<>(SUCCESS);
+        return ResultVOUtil.success();
     }
 
 }

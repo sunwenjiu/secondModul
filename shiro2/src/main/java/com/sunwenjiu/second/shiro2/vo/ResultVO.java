@@ -42,7 +42,7 @@ public class ResultVO<T> implements Serializable {
    }
 
    /*以下构造请勿删除，孙文九用异常捕捉错误提示用到*/
-   public ResultVO(Integer code) {
+   /*public ResultVO(Integer code) {
       this.code = code;
    }
 
@@ -55,6 +55,6 @@ public class ResultVO<T> implements Serializable {
    public ResultVO(Integer code, T data) {
       this.code = code;
       this.data = data;
-   }
+   }*/
 
 }
