@@ -34,6 +34,7 @@
         <module>swjTestB</module>
         <module>swjTestC</module>
         <module>shiro2</module>
+        <module>webSocket</module>
 
 
     </modules>
