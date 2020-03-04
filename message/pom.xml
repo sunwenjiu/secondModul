@@ -5,23 +5,13 @@
     <parent>
         <artifactId>secondmodul</artifactId>
         <groupId>com.sunwenjiu.second</groupId>
-       <!-- <version>1.0-SNAPSHOT</version>-->
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>main</artifactId>
+    <artifactId>message</artifactId>
+
     <dependencies>
-        <dependency>
-            <groupId>com.sunwenjiu.second</groupId>
-            <artifactId>swjTestA</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sunwenjiu.second</groupId>
-            <artifactId>shiro2</artifactId>
-            <version>${revision}</version>
-        </dependency>
         <dependency>
             <groupId>com.sunwenjiu.second</groupId>
             <artifactId>webSocket</artifactId>
@@ -29,11 +19,9 @@
         </dependency>
         <dependency>
             <groupId>com.sunwenjiu.second</groupId>
-            <artifactId>message</artifactId>
+            <artifactId>shiro2</artifactId>
             <version>${revision}</version>
         </dependency>
-
     </dependencies>
-
 
 </project>

@@ -166,7 +166,7 @@ public class PermissionServiceImpl implements PermissionService {
         } else {
             // 查询当前用户的所有角色
             List<Role> roles = userRoleRepository.findUserRolesByUser(user);
-            if (roles.size() != 0) {
+            if (roles != null && roles.size() > 0) {
                 list = rolePermissionRepository.findRolePermissionsByRole(roles);
             }
         }

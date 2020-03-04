@@ -1,0 +1,1 @@
+package com.sunwenjiu.second.message.enums;/** * 消息类型 * @author SWJ */public enum MessageTypeEnum {    /**     * 公告-给所有人的     */    PROCLAMATION,    /**     * 通知-给私人的     */    NOTICE;}
